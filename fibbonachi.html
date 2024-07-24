@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="maininpt">
+    <button onclick="main()">Fibb it</button>
+</body>
+<script>
+    function main(){
+        const no = parseInt(maininpt.value)
+        let no1 = 0
+        let no2 = 1
+        let sum1 = null
+
+        if(no === 1){
+            console.log(no2)
+        } else if(no === 2){
+            console.log(no2)
+        }else{
+            for (let i = 3; i <= no + 1; i++) {
+                sum1 = no1+no2
+                no1 = no2
+                no2 = sum1
+            }
+            console.log(sum1)
+        }
+
+    }
+</script>
+</html>

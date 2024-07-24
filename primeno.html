@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function main(no){
+        let stopper = true
+        for (let i = 2; i <= no - 1; i++) {
+            if(no % i === 0){
+                stopper = false
+                break
+            }
+        }
+        if(stopper === true){
+            console.log('it is prime')
+        }else{
+            console.log('it isnt prime')
+        }
+    }
+    main(29)
+</script>
+</html>

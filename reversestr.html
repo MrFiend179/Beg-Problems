@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="maininpt">
+    <button onclick="main()">Reverse Str</button>
+</body>
+<script>
+    function main(){
+        const strmn = maininpt.value
+        const strmn1 = strmn.split('')
+        const strmn2 = strmn1.reverse()
+        const strmn3 = strmn2.join('')
+        const strmn4 = strmn3.replace(',', '')
+        console.log(strmn4)
+    }
+</script>
+</html>

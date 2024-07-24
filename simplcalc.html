@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="maininpt">
+    <button onclick="main()">Calculate</button>
+</body>
+<script>
+    function main() {
+        const str = maininpt.value
+        const arr = str.split(/([+\-*/])/);
+        console.log(arr)
+        while (arr.includes('/') || arr.includes('*') || arr.includes('+') || arr.includes('-')) {
+            if (arr.includes('/')) {
+                const dvdans = parseFloat(arr[arr.indexOf('/') - 1]) / parseFloat(arr[arr.indexOf('/') + 1])
+                arr.splice(arr.indexOf('/') - 1, 3, dvdans.toString())
+                console.log(arr)
+            } else if (arr.includes('*')) {
+                const mdvdans = parseFloat(arr[arr.indexOf('*') - 1]) * parseFloat(arr[arr.indexOf('*') + 1])
+                arr.splice(arr.indexOf('*') - 1, 3, mdvdans.toString())
+                console.log(arr)
+            } else if (arr.includes('+')) {
+                const mdvdans = parseFloat(arr[arr.indexOf('+') - 1]) + parseFloat(arr[arr.indexOf('+') + 1])
+                arr.splice(arr.indexOf('+') - 1, 3, mdvdans.toString())
+                console.log(arr)
+            } else if (arr.includes('-')) {
+                const mdvdans = parseFloat(arr[arr.indexOf('-') - 1]) - parseFloat(arr[arr.indexOf('-') + 1])
+                arr.splice(arr.indexOf('-') - 1, 3, mdvdans.toString())
+                console.log(arr)
+            }
+            else {
+                console.log('False operator inserted')
+            }
+        }
+    }
+</script>
+
+</html>
